@@ -1,0 +1,43 @@
+# --- Python backend (backend/) ---
+# Bỏ môi trường ảo
+venv/
+.history/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Bỏ file môi trường
+backend/.env
+
+# Bỏ các thư viện, index FAISS
+backend/vectorstore/
+backend/*.faiss
+backend/*.pkl
+
+# --- ReactJS frontend (frontend/) ---
+# Node modules rất nặng, không push
+frontend/node_modules/
+
+# File build React
+frontend/build/
+frontend/.next/
+frontend/.cache/
+frontend/dist/
+
+# Biến môi trường React
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Log files
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# --- IDE settings (VSCode, system) ---
+.vscode/
+.DS_Store
+Thumbs.db

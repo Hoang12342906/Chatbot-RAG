@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+langchain
+langchain-community
+huggingface_hub
+langchain-huggingface
+PyPDF2
+faiss-cpu
+sentence-transformers
+sqlalchemy 
+pymysql
+python-dotenv
