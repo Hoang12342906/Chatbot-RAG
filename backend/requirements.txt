@@ -10,3 +10,4 @@ sentence-transformers
 sqlalchemy 
 pymysql
 python-dotenv
+python-multipart
