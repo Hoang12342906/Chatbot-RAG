@@ -1,0 +1,72 @@
+.admin-layout {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 240px;
+    background-color: #202123;
+    color: white;
+    padding: 16px;
+  }
+  
+  .sidebar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+  
+  .admin-main {
+    flex: 1;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-header {
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    background: #f9f9f9;
+  }
+  
+  .upload-section {
+    padding: 24px;
+    flex: 1;
+  }
+  
+  .upload-section input[type="file"] {
+    margin-bottom: 12px;
+  }
+  
+  .file-list {
+    margin: 12px 0;
+    padding-left: 20px;
+  }
+  
+  .file-list li {
+    margin-bottom: 6px;
+  }
+  
+  .upload-section button {
+    padding: 8px 20px;
+    font-weight: bold;
+    border: none;
+    background-color: #10a37f;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .upload-section button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .messages {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #333;
+  }
+  

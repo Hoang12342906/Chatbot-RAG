@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .chat-layout {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 240px;
+    background-color: #202123;
+    color: white;
+    padding: 16px;
+  }
+  
+  .sidebar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+  
+  .sidebar .history {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .chat-main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: white;
+  }
+  
+  .chat-header {
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    background: #f9f9f9;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .chat-bubble {
+    margin-bottom: 14px;
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 16px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+  }
+  
+  .chat-bubble.user {
+    background: #d1e7dd;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+  
+  .chat-bubble.bot {
+    background: #e2e3e5;
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  
+  .chat-input {
+    display: flex;
+    padding: 12px 16px;
+    border-top: 1px solid #ddd;
+    background: #fafafa;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    outline: none;
+  }
+  
+  .chat-input button {
+    margin-left: 10px;
+    font-size: 18px;
+    padding: 0 16px;
+    background-color: #10a37f;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+  }
+  .chat-bubble.bot.loading .text {
+    animation: blink 1.5s infinite;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
+
+  /* Nâng cấp cho phần sidebar history */
+.sidebar .history {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 20px;
+  }
+  
+  .sidebar .history > div:first-child {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #444;
+  }
+  
+  .session-item {
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    background-color: #2e2e33;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .session-item:hover {
+    background-color: #3e3e42;
+    transform: translateY(-2px);
+  }
+  
+  .session-item:before {
+    content: "💬";
+    margin-right: 8px;
+  }
+  
+  .session-item.active {
+    background-color: #10a37f;
+    color: white;
+  }
+  
+  .sidebar button {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 12px;
+    background-color: #10a37f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: bold;
+  }
+  
+  .sidebar button:hover {
+    background-color: #0d8c6c;
+    transform: translateY(-2px);
+  }
+  
+  /* Tạo thanh cuộn nếu có nhiều lịch sử */
+  .sidebar .history {
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+    padding-right: 5px;
+  }
+  
+  /* Tùy chỉnh thanh cuộn */
+  .sidebar .history::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .sidebar .history::-webkit-scrollbar-track {
+    background: #2c2c30;
+    border-radius: 10px;
+  }
+  
+  .sidebar .history::-webkit-scrollbar-thumb {
+    background: #10a37f;
+    border-radius: 10px;
+  }
+  
+  .sidebar .history::-webkit-scrollbar-thumb:hover {
+    background: #0d8c6c;
+  }
